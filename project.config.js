@@ -40,10 +40,10 @@ module.exports = {
   ci: {
     development: {
       firebase: {
-        apiKey: 'AIzaSyCTUERDM-Pchn_UDTsfhVPiwM4TtNIxots',
-        authDomain: 'redux-firebasev3.firebaseapp.com',
-        databaseURL: 'https://redux-firebasev3.firebaseio.com',
-        storageBucket: 'redux-firebasev3.appspot.com'
+        apiKey: 'AIzaSyBV0PaXZy__bYHP92gMQKQgJtZGUgZRDYA',
+        authDomain: 'dragonsfirestats.firebaseapp.com',
+        databaseURL: 'https://dragonsfirestats.firebaseio.com',
+        storageBucket: 'dragonsfirestats.appspot.com'
       },
       reduxFirebase: {
         userProfile: 'users', // root that user profiles are written to
@@ -53,10 +53,10 @@ module.exports = {
     },
     production: {
       firebase: {
-        apiKey: 'AIzaSyCTUERDM-Pchn_UDTsfhVPiwM4TtNIxots',
-        authDomain: 'redux-firebasev3.firebaseapp.com',
-        databaseURL: 'https://redux-firebasev3.firebaseio.com',
-        storageBucket: 'redux-firebasev3.appspot.com'
+        apiKey: 'AIzaSyBV0PaXZy__bYHP92gMQKQgJtZGUgZRDYA',
+        authDomain: 'dragonsfirestats.firebaseapp.com',
+        databaseURL: 'https://dragonsfirestats.firebaseio.com',
+        storageBucket: 'dragonsfirestats.appspot.com'
       },
       reduxFirebase: {
         userProfile: 'users',

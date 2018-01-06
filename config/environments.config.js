@@ -11,10 +11,10 @@ module.exports = {
   development: config => ({
     compiler_public_path: `http://${config.server_host}:${config.server_port}/`,
     firebase: {
-      apiKey: 'AIzaSyCTUERDM-Pchn_UDTsfhVPiwM4TtNIxots',
-      authDomain: 'redux-firebasev3.firebaseapp.com',
-      databaseURL: 'https://redux-firebasev3.firebaseio.com',
-      storageBucket: 'redux-firebasev3.appspot.com'
+      apiKey: 'AIzaSyBV0PaXZy__bYHP92gMQKQgJtZGUgZRDYA',
+      authDomain: 'dragonsfirestats.firebaseapp.com',
+      databaseURL: 'https://dragonsfirestats.firebaseio.com',
+      storageBucket: 'dragonsfirestats.appspot.com'
     },
     reduxFirebase: {
       userProfile: 'users', // root that user profiles are written to
@@ -38,10 +38,10 @@ module.exports = {
       colors: true
     },
     firebase: {
-      apiKey: 'AIzaSyCTUERDM-Pchn_UDTsfhVPiwM4TtNIxots',
-      authDomain: 'redux-firebasev3.firebaseapp.com',
-      databaseURL: 'https://redux-firebasev3.firebaseio.com',
-      storageBucket: 'redux-firebasev3.appspot.com'
+      apiKey: 'AIzaSyBV0PaXZy__bYHP92gMQKQgJtZGUgZRDYA',
+      authDomain: 'dragonsfirestats.firebaseapp.com',
+      databaseURL: 'https://dragonsfirestats.firebaseio.com',
+      storageBucket: 'dragonsfirestats.appspot.com'
     },
     reduxFirebase: {
       userProfile: 'users', // root that user profiles are written to

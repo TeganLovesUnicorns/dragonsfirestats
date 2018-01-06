@@ -54,8 +54,8 @@ const Home = ({ todos, uid, addNew, onSubmitFail }) => (
     <div className={classes.info}>
       <span>data loaded from</span>
       <span>
-        <a href="https://redux-firebasev3.firebaseio.com/">
-          redux-firebasev3.firebaseio.com
+        <a href="https://dragonsfirestats.firebaseio.com/">
+          dragonsfirestats.firebaseio.com
         </a>
       </span>
       <span className={classes.note}>
