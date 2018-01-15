@@ -32,37 +32,5 @@ module.exports = {
     'react-router',
     'react-redux-firebase',
     'material-ui'
-  ],
-  /**
-   * Settings used to create src/config.js using firebase-ci
-   * in ci environment. If you are running locally, go to src/config.js.
-   */
-  ci: {
-    development: {
-      firebase: {
-        apiKey: 'AIzaSyBV0PaXZy__bYHP92gMQKQgJtZGUgZRDYA',
-        authDomain: 'dragonsfirestats.firebaseapp.com',
-        databaseURL: 'https://dragonsfirestats.firebaseio.com',
-        storageBucket: 'dragonsfirestats.appspot.com'
-      },
-      reduxFirebase: {
-        userProfile: 'users', // root that user profiles are written to
-        enableLogging: false, // enable/disable Firebase Database Logging
-        updateProfileOnLogin: false // enable/disable updating of profile on login
-      }
-    },
-    production: {
-      firebase: {
-        apiKey: 'AIzaSyBV0PaXZy__bYHP92gMQKQgJtZGUgZRDYA',
-        authDomain: 'dragonsfirestats.firebaseapp.com',
-        databaseURL: 'https://dragonsfirestats.firebaseio.com',
-        storageBucket: 'dragonsfirestats.appspot.com'
-      },
-      reduxFirebase: {
-        userProfile: 'users',
-        enableLogging: false,
-        updateProfileOnLogin: false
-      }
-    }
-  }
+  ]
 }

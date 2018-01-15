@@ -25,6 +25,7 @@ const MOUNT_NODE = document.getElementById('root')
 let render = () => {
   const App = require('./containers/App').default
   const routes = require('./routes/index').default(store)
+
   // Tap Plugin for material-ui
   try {
     injectTapEventPlugin()

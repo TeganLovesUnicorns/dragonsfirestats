@@ -1,10 +1,7 @@
 {
   "projects": {
-    "dev": "dragonsfirestats",
-    "stage": "dragonsfirestats",
     "master": "dragonsfirestats",
-    "prod": "dragonsfirestats",
-    "default": "dragonsfirestats"
+    "prod": "dragonsfirestats"
   },
   "ci": {
     "createConfig": {

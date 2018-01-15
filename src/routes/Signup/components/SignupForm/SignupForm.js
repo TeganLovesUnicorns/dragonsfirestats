@@ -1,9 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Field, reduxForm } from 'redux-form'
+import { Field } from 'redux-form'
 import { TextField } from 'redux-form-material-ui'
 import RaisedButton from 'material-ui/RaisedButton'
-import { SIGNUP_FORM_NAME } from 'constants'
 import { required, validateEmail } from 'utils/form'
 import classes from './SignupForm.scss'
 
@@ -40,11 +39,10 @@ const SignupForm = ({ pristine, submitting, handleSubmit }) => (
 )
 
 SignupForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired, // eslint-disable-line react/no-unused-prop-types
   pristine: PropTypes.bool.isRequired, // added by redux-form
   submitting: PropTypes.bool.isRequired, // added by redux-form
-  handleSubmit: PropTypes.func.isRequired // added by redux-form
+  handleSubmit: PropTypes.func.isRequired // added by redux-form (calls onSubmit)
 }
 
-export default reduxForm({
-  form: SIGNUP_FORM_NAME
-})(SignupForm)
+export default SignupForm

@@ -25,11 +25,7 @@ const config = {
   },
   resolve: {
     modules: [inProject(project.srcDir), 'node_modules'],
-    extensions: ['*', '.js', '.jsx', '.json'],
-    alias: {
-      // fix issue of loading multiple versions of react
-      react: path.resolve('./node_modules/react')
-    }
+    extensions: ['*', '.js', '.jsx', '.json']
   },
   externals: project.externals,
   module: {
@@ -60,19 +56,23 @@ config.module.rules.push({
   test: /\.(js|jsx)$/,
   exclude: [
     /node_modules/,
-    /react-redux-firebase\/es/,
     /redux-firestore\/es/,
+    /react-redux-firebase\/es/
+    // Add other packages that you are npm linking here
   ],
   use: [
     {
       loader: 'babel-loader',
       query: {
         cacheDirectory: true,
+        // ignore root .babelrc (Check issue #59 for more details)
+        babelrc: false,
         plugins: [
           'lodash',
           'transform-decorators-legacy',
           'babel-plugin-transform-class-properties',
           'babel-plugin-syntax-dynamic-import',
+          'babel-plugin-transform-export-extensions',
           [
             'babel-plugin-transform-runtime',
             {
@@ -157,13 +157,22 @@ config.plugins.push(extractStyles)
 
 // Images
 // ------------------------------------
-config.module.rules.push({
-  test: /\.(png|jpg|gif)$/,
-  loader: 'url-loader',
-  options: {
-    limit: 8192
+config.module.rules.push(
+  {
+    test: /\.(png|jpg|gif)$/,
+    loader: 'url-loader',
+    options: {
+      limit: 8192
+    }
+  },
+  {
+    test: /octicons\.css$/,
+    loader: 'url-loader',
+    options: {
+      limit: 8192
+    }
   }
-})
+)
 
 // Fonts
 // ------------------------------------
@@ -205,8 +214,9 @@ config.plugins.push(
 // ------------------------------------
 if (__DEV__) {
   config.entry.main.push(
-    `webpack-hot-middleware/client.js?path=${config.output
-      .publicPath}__webpack_hmr`
+    `webpack-hot-middleware/client.js?path=${
+      config.output.publicPath
+    }__webpack_hmr`
   )
   config.plugins.push(
     new webpack.HotModuleReplacementPlugin(),
@@ -255,7 +265,7 @@ if (__PROD__) {
     new FaviconsWebpackPlugin({
       logo: 'static/logo.svg',
       inject: true,
-      title: 'material-example',
+      title: 'portfolio',
       persistentCache: true,
       icons: {
         favicons: true,
