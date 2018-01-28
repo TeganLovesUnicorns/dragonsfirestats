@@ -1,12 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import CircularProgress from 'material-ui/CircularProgress'
+import { Loader, Segment } from 'semantic-ui-react'
 import classes from './LoadingSpinner.scss'
 
 export const LoadingSpinner = ({ size }) => (
   <div className={classes.container}>
     <div className={classes.progress}>
-      <CircularProgress mode="indeterminate" size={size || 80} />
+      <Segment>
+        <Loader active inline="centered" indeterminate size="large" />
+      </Segment>
     </div>
   </div>
 )
