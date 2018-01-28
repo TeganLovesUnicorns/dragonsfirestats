@@ -30,6 +30,12 @@ export const NewProjectDialog = ({
         floatingLabelText="Project Name"
         validate={[required]}
       />
+      <Field
+        name="screenname"
+        component={TextField}
+        floatingLabelText="Screen Name"
+        validate={[required]}
+      />
     </form>
   </Dialog>
 )
