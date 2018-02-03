@@ -3,23 +3,32 @@ import PropTypes from 'prop-types'
 import { size } from 'lodash'
 import { connect } from 'react-redux'
 import { pure, compose, renderNothing, branch } from 'recompose'
-import Snackbar from 'material-ui/Snackbar'
-import CloseIcon from 'material-ui/svg-icons/navigation/close'
+import { Message } from 'semantic-ui-react'
+// import Snackbar from 'material-ui/Snackbar'
+// import CloseIcon from 'material-ui/svg-icons/navigation/close'
 import * as actions from '../actions'
-const closeIconStyle = { paddingTop: '5px', height: '30px' }
+
+// const closeIconStyle = { paddingTop: '5px', height: '30px' }
 
 export const Notifications = ({ allIds, byId, dismissNotification }) => (
   <div>
     {allIds.map(id => (
-      <Snackbar
+      <Message
         key={id}
-        open
-        contentStyle={{ color: 'white' }}
-        bodyStyle={{ paddingRight: 0 }}
-        action={<CloseIcon color="white" style={closeIconStyle} />}
-        onActionTouchTap={() => dismissNotification(id)}
-        message={byId[id].message}
+        compact
+        color='black'
+        onDismiss={() => dismissNotification(id)}
+        content={byId[id].message}
       />
+      // <Snackbar
+      //   key={id}
+      //   open
+      //   contentStyle={{ color: 'white' }}
+      //   bodyStyle={{ paddingRight: 0 }}
+      //   action={<CloseIcon color="white" style={closeIconStyle} />}
+      //   onActionTouchTap={() => dismissNotification(id)}
+      //   message={byId[id].message}
+      // />
     ))}
   </div>
 )

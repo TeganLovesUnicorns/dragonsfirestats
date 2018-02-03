@@ -4,7 +4,7 @@ import {
   NOTIFICATION_CLEAR
 } from './actionTypes'
 
-const defaultDismissTime = 2500 // 2.5 seconds
+const defaultDismissTime = 2000 // 2 seconds
 
 /**
  * @description Publish a notification. if `dismissAfter` is set,

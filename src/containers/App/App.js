@@ -19,9 +19,4 @@ App.propTypes = {
   store: PropTypes.object.isRequired
 }
 
-export default withContext(
-  {
-    muiTheme: PropTypes.object
-  },
-  () => ({ muiTheme: getMuiTheme(Theme) })
-)(App)
+export default App
