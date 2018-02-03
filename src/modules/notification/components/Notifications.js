@@ -16,7 +16,7 @@ export const Notifications = ({ allIds, byId, dismissNotification }) => (
       <Message
         key={id}
         compact
-        color='black'
+        color="black"
         onDismiss={() => dismissNotification(id)}
         content={byId[id].message}
       />

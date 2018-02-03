@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 // import FlatButton from 'material-ui/FlatButton'
-import { Menu, Item } from 'semantic-ui-react'
+import { Menu } from 'semantic-ui-react'
 import { LOGIN_PATH, SIGNUP_PATH } from 'constants'
 import classes from './Navbar.scss'
 
@@ -13,7 +13,7 @@ import classes from './Navbar.scss'
 
 export const LoginMenu = () => (
   <div className={classes.menu}>
-  <Menu>
+    <Menu>
       <Link to={SIGNUP_PATH}>
         <Menu.Item>Sign Up</Menu.Item>
       </Link>

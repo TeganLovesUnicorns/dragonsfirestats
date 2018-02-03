@@ -5,9 +5,9 @@ import PropTypes from 'prop-types'
 // import IconButton from 'material-ui/IconButton'
 // import DownArrow from 'material-ui/svg-icons/hardware/keyboard-arrow-down'
 // import Avatar from 'material-ui/Avatar'
-import { Image, Dropdown, Icon, Menu } from 'semantic-ui-react'
-import defaultUserImage from 'static/User.png'
-import classes from './Navbar.scss'
+import { Dropdown, Menu } from 'semantic-ui-react'
+// import defaultUserImage from 'static/User.png'
+// import classes from './Navbar.scss'
 
 // const buttonStyle = { marginRight: '.5rem', width: '200px', height: '64px' }
 
@@ -18,8 +18,8 @@ export const AccountMenu = ({
   onLogoutClick
 }) => (
   <div>
-        <Menu attached='top'>
-      <Dropdown item icon='content' simple>
+    <Menu attached="top">
+      <Dropdown item icon="content" simple>
         <Dropdown.Menu>
           <Dropdown.Item link onClick={goToAccount}>
             Account
