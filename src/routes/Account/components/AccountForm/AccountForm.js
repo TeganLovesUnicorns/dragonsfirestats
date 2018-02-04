@@ -1,8 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Field } from 'redux-form'
-import RaisedButton from 'material-ui/RaisedButton'
-import { TextField } from 'redux-form-material-ui'
+import { Form, Icon, Button } from 'semantic-ui-react'
+// import RaisedButton from 'material-ui/RaisedButton'
+// import { TextField } from 'redux-form-material-ui'
+import { LabelInputField } from 'react-semantic-redux-form'
 import ProviderDataForm from '../ProviderDataForm'
 import classes from './AccountForm.scss'
 
@@ -17,8 +19,10 @@ export const AccountForm = ({
     <div className={classes.fields}>
       <Field
         name="displayName"
-        component={TextField}
-        floatingLabelText="Display Name"
+        component={LabelInputField}
+        label={{ content: <Icon color='blue' name='user' size='large'/> }}
+        labelPosition='left'
+        placeholder='Username'
       />
       <Field name="email" component={TextField} floatingLabelText="Email" />
       <Field
