@@ -21,16 +21,14 @@ export const AccountMenu = ({
     <Menu attached="top">
       <Dropdown item icon="content" simple>
         <Dropdown.Menu>
-          <Dropdown.Item 
-            // link={true} 
-            onClick={goToAccount}
-          >
+          <Dropdown.Item
+            // link={true}
+            onClick={goToAccount}>
             Account
           </Dropdown.Item>
           <Dropdown.Item
             // link={true}
-            onClick={onLogoutClick}
-          >
+            onClick={onLogoutClick}>
             Sign Out
           </Dropdown.Item>
         </Dropdown.Menu>

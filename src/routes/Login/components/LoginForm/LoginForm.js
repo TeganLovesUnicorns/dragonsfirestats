@@ -13,20 +13,20 @@ export const LoginForm = ({ pristine, submitting, handleSubmit }) => (
     <Field
       name="email"
       component={LabelInputField}
-      label={{ content: <Icon color='blue' name='user' size='large'/> }}
-      labelPosition='left'
-      placeholder='E-mail'
+      label={{ content: <Icon color="blue" name="user" size="large" /> }}
+      labelPosition="left"
+      placeholder="E-mail"
       // component={TextField}
       // floatingLabelText="Email"
       // validate={[required, validateEmail]}
     />
     <Field
-      name='password'
+      name="password"
       component={LabelInputField}
-      type='password'
-      label={{ content: <Icon color='blue' name='lock' size='large'/> }}
-      labelPosition='left'
-      placeholder='Password'
+      type="password"
+      label={{ content: <Icon color="blue" name="lock" size="large" /> }}
+      labelPosition="left"
+      placeholder="Password"
       // name="password"
       // component={TextField}
       // floatingLabelText="Password"

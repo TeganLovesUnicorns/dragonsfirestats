@@ -14,21 +14,29 @@ export const AccountForm = ({
   submitting,
   pristine
 }) => (
-  <form className={classes.container} onSubmit={handleSubmit}>
+  <Form className={classes.container} onSubmit={handleSubmit}>
     <h4>Account</h4>
     <div className={classes.fields}>
       <Field
         name="displayName"
         component={LabelInputField}
-        label={{ content: <Icon color='blue' name='user' size='large'/> }}
-        labelPosition='left'
-        placeholder='Username'
+        label={{ content: <Icon color="blue" name="user" size="large" /> }}
+        labelPosition="left"
+        placeholder="Username"
       />
-      <Field name="email" component={TextField} floatingLabelText="Email" />
+      <Field
+        name="email"
+        component={LabelInputField}
+        label={{ content: <Icon color="blue" name="mail" size="large" /> }}
+        labelPosition="left"
+        placeholder="E-mail"
+      />
       <Field
         name="avatarUrl"
-        component={TextField}
-        floatingLabelText="Avatar Url"
+        component={LabelInputField}
+        label={{ content: <Icon color="blue" name="content" size="large" /> }}
+        labelPosition="left"
+        placeholder=""
       />
     </div>
     {!!account &&
@@ -38,13 +46,13 @@ export const AccountForm = ({
           <ProviderDataForm providerData={account.providerData} />
         </div>
       )}
-    <RaisedButton
+    <Button
       primary
       label={submitting ? 'Saving' : 'Save'}
       type="submit"
       disabled={pristine || submitting}
     />
-  </form>
+  </Form>
 )
 
 AccountForm.propTypes = {

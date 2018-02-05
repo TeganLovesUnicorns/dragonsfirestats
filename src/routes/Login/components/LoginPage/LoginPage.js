@@ -11,7 +11,7 @@ import classes from './LoginPage.scss'
 export const LoginPage = ({ emailLogin, googleLogin, onSubmitFail }) => (
   <div className={classes.container}>
     {/* <Paper className={classes.panel}> */}
-      <LoginForm onSubmit={emailLogin} onSubmitFail={onSubmitFail} />
+    <LoginForm onSubmit={emailLogin} onSubmitFail={onSubmitFail} />
     {/* </Paper> */}
     <div className={classes.or}>or</div>
     <div className={classes.providers}>
