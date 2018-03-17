@@ -1,8 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Field } from 'redux-form'
-import { TextField } from 'redux-form-material-ui'
-import RaisedButton from 'material-ui/RaisedButton'
+import { LabelInputField } from 'react-semantic-redux-form'
+// import { TextField } from 'redux-form-material-ui'
+// import RaisedButton from 'material-ui/RaisedButton'
+import { Button } from 'semantic-ui-react'
 import { required, validateEmail } from 'utils/form'
 import classes from './SignupForm.scss'
 
@@ -10,30 +12,27 @@ const SignupForm = ({ pristine, submitting, handleSubmit }) => (
   <form className={classes.container} onSubmit={handleSubmit}>
     <Field
       name="username"
-      component={TextField}
-      floatingLabelText="Username"
+      component={LabelInputField}
+      label="Username"
       validate={required}
     />
     <Field
       name="email"
-      component={TextField}
-      floatingLabelText="Email"
+      component={LabelInputField}
+      label="Email"
       validate={[required, validateEmail]}
     />
     <Field
       name="password"
-      component={TextField}
-      floatingLabelText="Password"
+      component={LabelInputField}
+      label="Password"
       type="password"
       validate={required}
     />
     <div className={classes.submit}>
-      <RaisedButton
-        label="Signup"
-        primary
-        type="submit"
-        disabled={pristine || submitting}
-      />
+      <Button positive type="submit" disabled={pristine || submitting}>
+        Signup
+      </Button>
     </div>
   </form>
 )

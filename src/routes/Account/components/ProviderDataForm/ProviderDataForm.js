@@ -11,21 +11,23 @@ export const ProviderData = ({ providerData }) => (
       {providerData.map((providerAccount, i) => (
         <div>
           <List.Item
-            key={i}
+            // key={i}
             label="account-provider"
             content={providerAccount.providerId}
           />
-          <List.Item
-            key="displayName"
-            label="display-name"
-            content={providerAccount.displayName}
-          />
-          <List.Item
-            key="email"
-            label="email"
-            content={providerAccount.email}
-            disabled
-          />
+          <List.List>
+            <List.Item
+              // key="displayName"
+              label="display-name"
+              content={providerAccount.displayName}
+            />
+            <List.Item
+              // key="email"
+              label="email"
+              content={providerAccount.email}
+              disabled
+            />
+          </List.List>
         </div>
       ))}
     </List>

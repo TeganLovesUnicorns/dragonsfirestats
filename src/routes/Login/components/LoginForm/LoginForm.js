@@ -9,7 +9,7 @@ import { required, validateEmail } from 'utils/form'
 import classes from './LoginForm.scss'
 
 export const LoginForm = ({ pristine, submitting, handleSubmit }) => (
-  <form className={classes.container} onSubmit={handleSubmit}>
+  <Form className={classes.container} onSubmit={handleSubmit}>
     <Field
       name="email"
       component={LabelInputField}
@@ -18,30 +18,26 @@ export const LoginForm = ({ pristine, submitting, handleSubmit }) => (
       placeholder="E-mail"
       // component={TextField}
       // floatingLabelText="Email"
-      // validate={[required, validateEmail]}
+      validate={[required, validateEmail]}
     />
     <Field
       name="password"
       component={LabelInputField}
-      type="password"
       label={{ content: <Icon color="blue" name="lock" size="large" /> }}
       labelPosition="left"
       placeholder="Password"
       // name="password"
       // component={TextField}
       // floatingLabelText="Password"
-      // type="password"
-      // validate={required}
+      type="password"
+      validate={required}
     />
     <div className={classes.submit}>
-      <Button
-        label={submitting ? 'Loading' : 'Login'}
-        primary
-        type="submit"
-        disabled={pristine || submitting}
-      />
+      <Button primary type="submit" disabled={pristine || submitting}>
+        {submitting ? 'Loading' : 'Login'}
+      </Button>
     </div>
-  </form>
+  </Form>
 )
 
 LoginForm.propTypes = {

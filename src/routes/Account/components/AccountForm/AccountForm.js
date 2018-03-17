@@ -48,10 +48,11 @@ export const AccountForm = ({
       )}
     <Button
       primary
-      label={submitting ? 'Saving' : 'Save'}
+      // label={submitting ? 'Saving' : 'Save'}
       type="submit"
-      disabled={pristine || submitting}
-    />
+      disabled={pristine || submitting}>
+      {submitting ? 'Saving' : 'Save'}
+    </Button>
   </Form>
 )
 

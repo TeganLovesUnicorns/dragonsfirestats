@@ -1,9 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Dialog from 'material-ui/Dialog'
-import FlatButton from 'material-ui/FlatButton'
+// import Dialog from 'material-ui/Dialog'
+// import FlatButton from 'material-ui/FlatButton'
 import { Field } from 'redux-form'
-import { TextField } from 'redux-form-material-ui'
+import { Modal, Button, Form } from 'semantic-ui-react'
+import { LabelInputField } from 'react-semantic-redux-form'
+// import { TextField } from 'redux-form-material-ui'
 import { required } from 'utils/form'
 
 import classes from './NewProjectDialog.scss'
@@ -14,30 +16,35 @@ export const NewProjectDialog = ({
   submit,
   handleSubmit
 }) => (
-  <Dialog
+  <Modal
     open={open}
-    title="New Project"
     onRequestClose={onRequestClose}
-    contentClassName={classes.container}
-    actions={[
-      <FlatButton label="Cancel" secondary onTouchTap={onRequestClose} />,
-      <FlatButton label="Create" primary onTouchTap={submit} />
-    ]}>
-    <form onSubmit={handleSubmit} className={classes.inputs}>
+    contentClassName={classes.container}>
+    <Modal.Header>New Project</Modal.Header>
+    <Form onSubmit={handleSubmit} className={classes.inputs}>
       <Field
         name="name"
-        component={TextField}
-        floatingLabelText="Project Name"
+        component={LabelInputField}
+        label="Name"
         validate={[required]}
       />
       <Field
         name="screenname"
-        component={TextField}
-        floatingLabelText="Screen Name"
+        component={LabelInputField}
+        label="Screen Name"
         validate={[required]}
       />
-    </form>
-  </Dialog>
+    </Form>
+    <Button.Group>
+      <Button negative onClick={onRequestClose}>
+        Cancel
+      </Button>
+      <Button.Or />
+      <Button positive onClick={submit}>
+        Submit
+      </Button>
+    </Button.Group>
+  </Modal>
 )
 
 NewProjectDialog.propTypes = {

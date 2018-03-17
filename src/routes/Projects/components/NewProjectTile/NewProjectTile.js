@@ -1,18 +1,18 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Paper from 'material-ui/Paper'
-import ContentAddCircle from 'material-ui/svg-icons/content/add-circle'
+// import Paper from 'material-ui/Paper'
+// import ContentAddCircle from 'material-ui/svg-icons/content/add-circle'
+import { Icon, Segment } from 'semantic-ui-react'
 import classes from './NewProjectTile.scss'
 
-const iconSize = '6rem'
-const iconStyle = { width: iconSize, height: iconSize }
-const color = '#979797'
-const hoverColor = '#616161'
-
 export const NewProjectTile = ({ onClick }) => (
-  <Paper className={classes.container} onClick={onClick}>
-    <ContentAddCircle style={iconStyle} color={color} hoverColor={hoverColor} />
-  </Paper>
+  <div className={classes.container} onClick={onClick}>
+    {/* <Paper className={classes.container} onClick={onClick}> */}
+    <Segment>
+      <Icon name="add" size="massive" />
+    </Segment>
+    {/* </Paper> */}
+  </div>
 )
 
 NewProjectTile.propTypes = {

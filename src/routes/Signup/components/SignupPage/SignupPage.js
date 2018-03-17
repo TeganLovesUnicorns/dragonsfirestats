@@ -2,7 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router'
 import GoogleButton from 'react-google-button'
-import Paper from 'material-ui/Paper'
+// import Paper from 'material-ui/Paper'
+import { Segment } from 'semantic-ui-react'
 import { LOGIN_PATH } from 'constants'
 import SignupForm from '../SignupForm'
 
@@ -10,9 +11,9 @@ import classes from './SignupPage.scss'
 
 export const SignupPage = ({ emailSignup, googleLogin, onSubmitFail }) => (
   <div className={classes.container}>
-    <Paper className={classes.panel}>
+    <Segment className={classes.panel}>
       <SignupForm onSubmit={emailSignup} onSubmitFail={onSubmitFail} />
-    </Paper>
+    </Segment>
     <div className={classes.or}>or</div>
     <div className={classes.providers}>
       <GoogleButton onClick={googleLogin} />
