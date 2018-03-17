@@ -2,8 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Field } from 'redux-form'
 import { Form, Icon, Button } from 'semantic-ui-react'
-// import RaisedButton from 'material-ui/RaisedButton'
-// import { TextField } from 'redux-form-material-ui'
 import { LabelInputField } from 'react-semantic-redux-form'
 import ProviderDataForm from '../ProviderDataForm'
 import classes from './AccountForm.scss'
@@ -48,7 +46,6 @@ export const AccountForm = ({
       )}
     <Button
       primary
-      // label={submitting ? 'Saving' : 'Save'}
       type="submit"
       disabled={pristine || submitting}>
       {submitting ? 'Saving' : 'Save'}

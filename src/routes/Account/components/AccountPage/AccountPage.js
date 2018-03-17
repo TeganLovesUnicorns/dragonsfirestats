@@ -1,13 +1,11 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// import Paper from 'material-ui/Paper'
 import AccountForm from '../AccountForm'
 import defaultUserImageUrl from 'static/User.png'
 import classes from './AccountPage.scss'
 
 export const AccountPage = ({ avatarUrl, updateAccount, profile }) => (
   <div className={classes.container}>
-    {/* <Paper className={classes.pane}> */}
     <div className={classes.settings}>
       <div className={classes.avatar}>
         <img
@@ -23,7 +21,6 @@ export const AccountPage = ({ avatarUrl, updateAccount, profile }) => (
         />
       </div>
     </div>
-    {/* </Paper> */}
   </div>
 )
 
