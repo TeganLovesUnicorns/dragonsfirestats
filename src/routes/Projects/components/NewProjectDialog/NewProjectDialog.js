@@ -1,11 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// import Dialog from 'material-ui/Dialog'
-// import FlatButton from 'material-ui/FlatButton'
 import { Field } from 'redux-form'
 import { Modal, Button, Form } from 'semantic-ui-react'
 import { LabelInputField } from 'react-semantic-redux-form'
-// import { TextField } from 'redux-form-material-ui'
 import { required } from 'utils/form'
 
 import classes from './NewProjectDialog.scss'

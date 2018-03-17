@@ -1,9 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Segment, Icon, Button } from 'semantic-ui-react'
-// import Paper from 'material-ui/Paper'
-// import IconButton from 'material-ui/IconButton'
-// import DeleteIcon from 'material-ui/svg-icons/action/delete'
 import classes from './ProjectTile.scss'
 
 export const ProjectTile = ({ name, onSelect, onDelete, showDelete }) => (

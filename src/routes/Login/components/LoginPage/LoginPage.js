@@ -2,7 +2,6 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router'
 import GoogleButton from 'react-google-button'
-// import Paper from 'material-ui/Paper'
 import { SIGNUP_PATH } from 'constants'
 import LoginForm from '../LoginForm'
 
@@ -10,9 +9,7 @@ import classes from './LoginPage.scss'
 
 export const LoginPage = ({ emailLogin, googleLogin, onSubmitFail }) => (
   <div className={classes.container}>
-    {/* <Paper className={classes.panel}> */}
     <LoginForm onSubmit={emailLogin} onSubmitFail={onSubmitFail} />
-    {/* </Paper> */}
     <div className={classes.or}>or</div>
     <div className={classes.providers}>
       <GoogleButton onClick={googleLogin} />
