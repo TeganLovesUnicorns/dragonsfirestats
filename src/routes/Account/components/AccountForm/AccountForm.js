@@ -34,7 +34,7 @@ export const AccountForm = ({
         component={LabelInputField}
         label={{ content: <Icon color="blue" name="content" size="large" /> }}
         labelPosition="left"
-        placeholder=""
+        placeholder="Avatar URL"
       />
     </div>
     {!!account &&
