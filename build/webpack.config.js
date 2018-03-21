@@ -108,51 +108,26 @@ config.module.rules.push({
 
 // Styles
 // ------------------------------------
+// ++++++++++++++++++++++++++++++++++++
+// TO-DO: Replace CSS and SCSS with LESS to make Semantic-UI easier to use.
+// ++++++++++++++++++++++++++++++++++++
 const extractStyles = new ExtractTextPlugin({
   filename: 'styles/[name].[contenthash].css',
   allChunks: true,
   disable: __DEV__
 })
 
-// config.module.rules.pop({
-//   test: /\.(less)$/,
-//   loader: extractStyles.extract({
-//     fallback: 'style-loader',
-//     use: [
-//       {
-//         loader: 'css-loader',
-//         options: {
-//           sourceMap:project.sourcemaps,
-//           modules: true,
-//           importLoaders: 2,
-//           localIdentName: '[name]__[local]___[hash:base64:5]',
-//           minimize: {
-//             autoprefixer: {
-//               add: true,
-//               remove: true,
-//               browsers: ['last 2 versions']
-//             },
-//             discardComments: {
-//               removeAll: true
-//             },
-//             discardUnused: false,
-//             mergeIdents: false,
-//             reduceIdents: false,
-//             safe: true,
-//             sourcemap: project.sourcemaps
-//           }
-//         } 
-//       },
-//       {
-//         loader: 'less-loader',
-//         options: {
-//           sourceMap:project.sourcemaps,
-//           includePaths: [inProjectSrc('styles')]
-//         }
-//       }
-//     ]
-//   })
-// })
+// CSS support for semantic-UI...
+config.module.rules.push({
+  test: /\.(css)$/,
+  loader: extractStyles.extract({
+    fallback: 'style-loader',
+    use:
+      {
+        loader: 'css-loader',
+      }
+  })
+})
 
 config.module.rules.push({
   test: /\.(sass|scss)$/,
