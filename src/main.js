@@ -6,7 +6,7 @@ import { version } from '../package.json'
 import { env } from './config'
 import './styles/core.scss'
 // import '../semantic/src/semantic.less'
-// import '../semantic/dist/semantic.min.css';
+import '../semantic/dist/semantic.min.css';
 
 // Window Variables
 // ------------------------------------
