@@ -4,11 +4,9 @@ import { Icon, Segment } from 'semantic-ui-react'
 import classes from './NewProjectTile.scss'
 
 export const NewProjectTile = ({ onClick }) => (
-  <div className={classes.container} onClick={onClick}>
-    <Segment>
-      <Icon name="add" size="massive" />
-    </Segment>
-  </div>
+  <Segment className={classes.container} onClick={onClick}>
+    <Icon name="add" size="massive" />
+  </Segment>
 )
 
 NewProjectTile.propTypes = {

@@ -46,7 +46,6 @@
     "redux-form": "^7.2.0",
     "redux-form-semantic-ui": "^1.0.0",
     "redux-thunk": "^2.2.0",
-    "semantic-ui": "^2.2.13",
     "semantic-ui-react": "^0.77.2",
     "whatwg-fetch": "^2.0.3"
   },
@@ -103,6 +102,7 @@
     "karma-mocha-reporter": "^2.2.1",
     "karma-phantomjs-launcher": "^1.0.4",
     "karma-webpack-with-fast-source-maps": "^1.10.0",
+    "less-loader": "^4.1.0",
     "mocha": "^3.2.0",
     "node-sass": "^4.5.3",
     "phantomjs-prebuilt": "^2.1.14",
@@ -111,6 +111,7 @@
     "react-test-renderer": "^15.5.4",
     "rimraf": "^2.6.1",
     "sass-loader": "^6.0.5",
+    "semantic-ui": "^2.3.1",
     "sinon": "^2.2.0",
     "sinon-chai": "^2.10.0",
     "style-loader": "^0.17.0",
