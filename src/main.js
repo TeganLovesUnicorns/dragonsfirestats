@@ -4,9 +4,10 @@ import injectTapEventPlugin from 'react-tap-event-plugin'
 import createStore from './store/createStore'
 import { version } from '../package.json'
 import { env } from './config'
+import '../semantic/dist/semantic.min.css';
 import './styles/core.scss'
 // import '../semantic/src/semantic.less'
-import '../semantic/dist/semantic.min.css';
+
 
 // Window Variables
 // ------------------------------------

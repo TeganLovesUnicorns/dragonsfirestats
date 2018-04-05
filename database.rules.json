@@ -9,6 +9,12 @@
     },
     "projects": {
       ".indexOn": ["createdBy"]
+    },
+    "parties": {
+      ".indexOn": ["createdBy"]
+    },
+    "characters": {
+      ".indexOn": ["createdBy"]
     }
   }
 }

@@ -166,3 +166,9 @@ For more options on CI settings checkout the [firebase-ci docs](https://github.c
 [license-url]: https://github.com/flyingguitarman/dragonsfirestats/blob/master/LICENSE
 [code-style-image]: https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat-square
 [code-style-url]: http://standardjs.com/
+
+
+## TO-DO
+
+### Styling
+- Refactor everything to LESS instead of SCSS and CSS so as to make Semantic-UI easier to customize.
