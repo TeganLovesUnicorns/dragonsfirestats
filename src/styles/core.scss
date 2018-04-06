@@ -42,4 +42,8 @@
   [type=button]{
     -webkit-appearance: none !important;
   }
+  // Fix for styles issue with NewTile
+  .ui.segment:first-child {
+    margin-top: 1rem;
+  }
 }

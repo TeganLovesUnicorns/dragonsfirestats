@@ -2,10 +2,11 @@
 
 .container {
   padding: 2rem;
+  display: inline-block;
 }
 .inputs {
   @extend .flex-column-center;
-  justify-content: center;
+  justify-content: left;
   width: 100%;
   input {
     width: 100%;

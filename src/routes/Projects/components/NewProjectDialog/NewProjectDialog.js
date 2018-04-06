@@ -7,6 +7,16 @@ import { required } from 'utils/form'
 
 import classes from './NewProjectDialog.scss'
 
+
+// TODO Temporary fix for React Semantic UI issues
+const inlineStyke = {
+  modal: {
+    marginTop: '0px !important',
+    marginLeft: 'auto',
+    marginRight: 'auto'
+  }
+};
+
 export const NewProjectDialog = ({
   open,
   onRequestClose,
@@ -16,7 +26,8 @@ export const NewProjectDialog = ({
   <Modal
     open={open}
     onRequestClose={onRequestClose}
-    contentClassName={classes.container}>
+    contentClassName={classes.container}
+    style={inlineStyke.modal}>
     <Modal.Header>New Project</Modal.Header>
     <Form onSubmit={handleSubmit} className={classes.inputs}>
       <Field
