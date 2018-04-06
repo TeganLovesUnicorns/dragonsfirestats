@@ -3,6 +3,15 @@ import PropTypes from 'prop-types'
 import { Segment, Icon, Button } from 'semantic-ui-react'
 import classes from './ProjectTile.scss'
 
+const inlineStyle = {
+  icon: {
+    marginTop: '0px',
+    marginBottom: '0px',
+    marginLeft: 'auto',
+    marginRight: 'auto'
+  }
+};
+
 export const ProjectTile = ({ name, onSelect, onDelete, showDelete }) => (
   <Segment className={classes.container}>
     <div className={classes.top}>
@@ -11,7 +20,7 @@ export const ProjectTile = ({ name, onSelect, onDelete, showDelete }) => (
       </span>
       {showDelete && onDelete ? (
         <Button onClick={onDelete}>
-          <Icon name="delete" />
+          <Icon name="delete" style={inlineStyle.icon} />
         </Button>
       ) : null}
     </div>
