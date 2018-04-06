@@ -44,10 +44,7 @@ export const AccountForm = ({
           <ProviderDataForm providerData={account.providerData} />
         </div>
       )}
-    <Button
-      primary
-      type="submit"
-      disabled={pristine || submitting}>
+    <Button primary type="submit" disabled={pristine || submitting}>
       {submitting ? 'Saving' : 'Save'}
     </Button>
   </Form>

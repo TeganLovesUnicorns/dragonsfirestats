@@ -122,10 +122,9 @@ config.module.rules.push({
   test: /\.(css)$/,
   loader: extractStyles.extract({
     fallback: 'style-loader',
-    use:
-      {
-        loader: 'css-loader',
-      }
+    use: {
+      loader: 'css-loader'
+    }
   })
 })
 

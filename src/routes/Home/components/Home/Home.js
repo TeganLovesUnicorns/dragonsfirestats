@@ -4,8 +4,7 @@ import React from 'react'
 import classes from './Home.scss'
 
 export const Home = () => (
-  <div
-    className={classes.container}>
+  <div className={classes.container}>
     <h1>Home</h1>
     <h2>Welcome to Dragonsfire Stats</h2>
     <h3>The best app in the world for playing Dungeons &amp; Dragons.</h3>

@@ -7,7 +7,6 @@ import { required } from 'utils/form'
 
 import classes from './NewProjectDialog.scss'
 
-
 // TODO Temporary fix for React Semantic UI issues
 const inlineStyke = {
   modal: {
@@ -15,7 +14,7 @@ const inlineStyke = {
     marginLeft: 'auto',
     marginRight: 'auto'
   }
-};
+}
 
 export const NewProjectDialog = ({
   open,
