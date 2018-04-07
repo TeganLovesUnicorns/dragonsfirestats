@@ -128,6 +128,47 @@ config.module.rules.push({
   })
 })
 
+// LESS support to port styles over
+config.module.rules.push({
+  test: /\.(less)$/,
+  loader: extractStyles.extract({
+    fallback: 'style-loader',
+    use: [
+      {
+        loader: 'css-loader',
+        options: {
+          sourceMap: project.sourcemaps,
+          modules: true,
+          importLoaders: 2,
+          localIdentName: '[name]__[local]___[hash:base64:5]',
+          minimize: {
+            autoprefixer: {
+              add: true,
+              remove: true,
+              browsers: ['last 2 versions']
+            },
+            discardComments: {
+              removeAll: true
+            },
+            discardUnused: false,
+            mergeIdents: false,
+            reduceIdents: false,
+            safe: true,
+            sourcemap: project.sourcemaps
+          }
+        }
+      },
+      {
+        loader: 'less-loader',
+        options: {
+          sourceMap: project.sourcemaps,
+          includePaths: [inProjectSrc('styles')]
+        }
+      }
+    ]
+  })
+})
+
 config.module.rules.push({
   test: /\.(sass|scss)$/,
   loader: extractStyles.extract({

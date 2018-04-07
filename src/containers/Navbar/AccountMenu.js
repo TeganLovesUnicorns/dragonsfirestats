@@ -1,15 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// import IconMenu from 'material-ui/IconMenu'
-// import MenuItem from 'material-ui/MenuItem'
-// import IconButton from 'material-ui/IconButton'
-// import DownArrow from 'material-ui/svg-icons/hardware/keyboard-arrow-down'
 // import Avatar from 'material-ui/Avatar'
-import { Dropdown, Menu } from 'semantic-ui-react'
-// import defaultUserImage from 'static/User.png'
+import { Dropdown, Menu, Image } from 'semantic-ui-react'
+import defaultUserImage from 'static/User.png'
 // import classes from './Navbar.scss'
 
 // const buttonStyle = { marginRight: '.5rem', width: '200px', height: '64px' }
+
+const inlineStyles = {
+  image: {
+    height: '32px',
+    width: '32px',
+    margin: '5px',
+    verticalAlign: 'middle'
+  },
+  span: {
+    alignSelf: 'center'
+  }
+}
 
 export const AccountMenu = ({
   avatarUrl,
@@ -19,6 +27,8 @@ export const AccountMenu = ({
 }) => (
   <div>
     <Menu attached="top">
+      <Image src={avatarUrl || defaultUserImage} style={inlineStyles.image} size='mini' circular />
+      <span style={inlineStyles.span}>{displayName}</span>
       <Dropdown item icon="content" simple>
         <Dropdown.Menu>
           <Dropdown.Item
@@ -50,32 +60,7 @@ export const AccountMenu = ({
       </Dropdown>
     </Menu> */}
   </div>
-  // <IconMenu
-  //   iconButtonElement={
-  //     <IconButton style={buttonStyle} disableTouchRipple>
-  //       <div className={classes.avatar}>
-  //         <div className="hidden-mobile">
-  //           <Avatar src={avatarUrl || defaultUserImage} />
-  //         </div>
-  //         <div className={classes['avatar-text']}>
-  //           <span className={`${classes['avatar-text-name']} hidden-mobile`}>
-  //             {displayName || 'User'}
-  //           </span>
-  //           <DownArrow color="white" />
-  //         </div>
-  //       </div>
-  //     </IconButton>
-  //   }
-  //   targetOrigin={{ horizontal: 'right', vertical: 'bottom' }}
-  //   anchorOrigin={{ horizontal: 'right', vertical: 'top' }}
-  //   animated={false}
-  //   >
-  //   <MenuItem primaryText="Account" onTouchTap={goToAccount} />
-  //   <MenuItem primaryText="Sign out" onTouchTap={onLogoutClick} />
-  // </IconMenu>
 )
-
-// AccountMenu.muiName = 'IconMenu'
 
 AccountMenu.propTypes = {
   displayName: PropTypes.string,

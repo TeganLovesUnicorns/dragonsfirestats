@@ -8,6 +8,13 @@ import LoginMenu from './LoginMenu'
 import { LIST_PATH } from 'constants'
 import classes from './Navbar.scss'
 
+const inlineStyles = {
+  brand: {
+    alignSelf: 'center'
+  }
+}
+
+
 export const Navbar = ({
   avatarUrl,
   displayName,
@@ -16,7 +23,7 @@ export const Navbar = ({
   handleLogout
 }) => (
   <Menu attached="top">
-    <Link to={authExists ? LIST_PATH : '/'} className={classes.brand}>
+    <Link to={authExists ? LIST_PATH : '/'} className={classes.brand} style={inlineStyles.brand}>
       DragonsFire
     </Link>
     <Menu.Menu position="right">

@@ -1,13 +1,14 @@
 import React from 'react'
 // import { Link } from 'react-router'
 // import { paths } from 'constants'
-import classes from './Home.scss'
+// import classes from './Home.scss'
+import classes from './Home.less'
 
 export const Home = () => (
   <div className={classes.container}>
     <h1>Home</h1>
     <h2>Welcome to Dragonsfire Stats</h2>
-    <h3>The best app in the world for playing Dungeons &amp; Dragons.</h3>
+    <h3>The best app in the world for playing Dungeons &amp; Dragons. (Well once it's built.)</h3>
     <p>
       With Dragonsfire you will be able to eliminate the need for your party
       members to lug their Player's Handbook and their Character Sheets around.
